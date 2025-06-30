@@ -7,15 +7,16 @@ function App() {
  // const [count, setCount] = useState(0)
 
   return (
-    <>
-      
-      <h1>Super Squads</h1>
-          <div class="rueda-container">
-              <div class="rueda-img-wrapper">     
-                  <Rueda /> 
+      <>
+          <div>
+              <h1>Super Squads</h1>
+             <div className="rueda-container">
+              <div className="rueda-img-wrapper">
+                  <Rueda />
               </div>
-      </div>  
-    </>
+              </div>
+          </div>
+      </>
   )
 }
 

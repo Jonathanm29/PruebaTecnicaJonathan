@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100vh;
     height: 100vh;
     user-select: none;
+    margin-top: 80px;
 }
 .rueda-img-wrapper {
     position: relative;

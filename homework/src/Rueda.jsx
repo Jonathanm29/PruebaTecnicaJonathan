@@ -63,9 +63,10 @@ export default function RuedaConTarjetas() {
         lastRot.current = snapped;
     };
     const activeIndex = (() => {
-        const normalizedRot = ((rot % 360) + 360) % 360;
+        const normalizedRot = ((rot % 360) + 360) % 360; // convierte a rango 0–359
         const index = Math.round(normalizedRot / angleStep) % n;
-        return index;
+        const pos = (1 - index + n) % n; // posición 1 es la que debe estar arriba
+        return pos;
     })();
 
 
