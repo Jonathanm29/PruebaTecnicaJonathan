@@ -1,0 +1,68 @@
+/* src/RuedaConTarjetas.css */
+
+/* contenedor full-centro con flex */
+.wrapper {
+    display:contents;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100%;
+    background: #ffffff; /* Igual que tu fondo */
+    user-select: none;
+    overflow: hidden;
+}
+
+/* contenedor de la rueda */
+.wheel {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    cursor: grab;
+}
+
+/* imagen de la rueda */
+.wheel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* cada wrapper posiciona la tarjeta */
+.card-wrapper {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    /* ya aplicamos rotate y translate en inline-style */
+}
+
+/* la tarjeta en sí */
+.card {
+    width: 120px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    transform-origin: center bottom;
+}
+
+    .card img {
+        width: 100%;
+        display: block;
+    }
+
+    .card span {
+        display: block;
+        padding: 8px;
+        font-size: 14px;
+        color: #333;
+    }
+.card {
+    transition: transform 0.3s ease, scale 0.3s ease;
+}
+
+    .card.highlight {
+        transform: scale(1.8);
+        z-index: 2;
+    }
